@@ -1,0 +1,335 @@
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, div
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: inherit;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	box-sizing: inherit;
+}
+body {
+	box-sizing: border-box;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+/*** END OF CSS RESET STYLESHEET ***/
+
+/*** GENERAL STRUCTURE & PAGE LAYOUT ***/
+body{
+	background-color: #c947ff;
+	padding: 0;
+	margin: 0;
+}
+.page_wrap{
+	margin: 0 auto;
+	max-width: 1085px;
+	min-height: 101vh;
+	background: url(../svg/background_svg_4_1.svg) repeat-y;
+	background-color: #ffffff;
+	background-position-x: center;
+}
+.page_wrap > *{
+	margin: 0 auto;
+	max-width: 885px;
+	min-width: 320px;
+	background-color: #ffffff;
+}
+header{
+	height: 70px;
+	position: relative;
+}
+header > svg{
+	position :absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 40%;
+	margin-top: -46px;
+	width: 300px;
+	height: 94px;
+}
+nav{
+	margin: 0;
+	position: relative;
+	width: 70%;
+	height: 100px;
+}
+#content{
+	display: block;
+	padding-bottom: 100px;
+}
+/*** END OF GENERAL STRUCTURE & PAGE LAYOUT ***/
+
+/*** NAVIGATION ***/
+nav > a > div > .nav_hover{
+	overflow: hidden;
+  -webkit-transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition:         all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);;
+}
+nav > a > div:hover .nav_hover{
+	width: 0;
+}
+nav > a > div, nav > a > div > svg, .nav_hover, .nav_hover > svg{
+	position: absolute;
+	width: 160px;
+	height: 50px;
+}
+.nav_selected .nav_hover{
+	width: 0;
+}
+nav .nav_hover > svg{
+	top: 0;
+	left: 0;
+}
+/*Nav buttons specific positions*/
+.nav_home{
+	top: 0;
+	left: 0;
+}
+.nav_career{
+	bottom: 0;
+	right: 50%;
+}
+.nav_about{
+	top: 0;
+	left: 50%;
+}
+.nav_contact{
+	bottom: 0;
+	right: 0;
+}
+/*** END OF NAVIGATION ***/
+
+/*** CONTENT ***/
+/** responsive gutters **/
+.row{
+ 	padding: 0px 30px;
+ 	justify-content: center;
+}
+.row:first-child{
+	padding-top: 30px;
+}
+
+@media screen and (max-width:800px){
+	.row{
+		padding: 0px 15px; 
+	}
+	.row:first-child{
+		padding-top: 15px;
+	}
+}
+@media screen and (max-width:400px){
+	.row{
+ 	padding: 0px 0px; 
+	}
+	.row:first-child{
+		padding-top: 5px;
+	}
+}
+/** end responsive gutters **/
+	
+/** column style and layout **/
+.col {
+ 	flex: 1 1 0px;
+	display: flex;
+	flex-flow: column nowrap;
+    align-items: center; 
+	text-align: justify;
+	margin: 10px; /* fallback */
+	padding: 10px;
+	padding: 2vh 2vw;
+	margin: 1vh 1vw;
+
+}
+#content{
+	font-family: Verdana;
+	line-height: 20px;
+	color: #42294d;
+}
+.cola
+{
+	color: #42294d;
+	line-height: 40px;
+}
+.colb
+{
+ 	border: 2px solid #dbc7e3; 
+	background-color: #fff;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.colb > p 
+{
+	text-indent: 3em;
+}
+/** end of column style and layout **/
+
+/** career specific layouts **/
+.career .languages > ul{
+	display: inline;
+}
+.career .languages > ul > li{ display: inline;}
+
+.career .skills > ul, .career .applied > ul {
+	list-style-type: circle;
+}
+.career .skills > ul > li, .career .applied > ul > li{
+	padding: 3px;
+}
+/** end of career specific layouts **/
+
+/** about specific layouts **/
+.about img{
+    max-width: 300px; 
+    max-height: 300px;
+}
+.about .cola{
+  white-space: nowrap;
+}
+.about .education > p:first-of-type{
+	font-size: 87%;
+	font-weight: bold;
+}
+.about .hobbies > div{
+	margin-left: 25px;
+}
+/** end of about specific layouts **/
+
+/** contact specific layouts **/
+.contact .col{
+	margin:55px 0;
+	margin:7vh 0;
+}
+.contact .link{
+	background: none;
+	margin: 0;
+}
+.contact .link:hover{
+	background: radial-gradient( #ece5ed 0%, #ffffff 75%);
+}
+.contact .link > div{
+	display: flex;
+	flex-wrap: nowrap;
+}
+.contact .link img{
+	transition: all 0.2s ease-in-out;
+}
+.contact img{
+	height: 30px;
+	width: auto;
+}
+.contact .link:hover img{
+	height: 33px;
+}
+/** end of contact specific layouts **/
+
+/*** END OF CONTENT ***/
+
+/*** 12 column RESPONSIVE FLEX GRID ***/
+.grid {
+ 	width: 100%; 
+	margin: 0 auto;
+}
+.row{
+	display: flex;
+ 	flex-wrap: wrap; 
+}
+.grid:before, .grid:after, .row:before, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='col-']{
+	display: flex;
+	justify-content: center;
+	flex: 0 0 0px;
+}
+.col {
+	flex: 1 1 0px;
+}
+.col-1 {flex-basis: 8.33333%;}
+.col-2 {flex-basis: 16.66667%;}
+.col-3 {flex-basis: 25%;}
+.col-4 {flex-basis: 33.33333%;}
+.col-5 {flex-basis: 41.66667%;}
+.col-6 {flex-basis: 50%;}
+.col-7 {flex-basis: 58.33333%;}
+.col-8 {flex-basis: 66.66667%;}
+.col-9 {flex-basis: 75%;}
+.col-10 {flex-basis: 83.33333%;}
+.col-11 {flex-basis: 91.66667%;}
+.col-12 {flex-basis: 100%;}
+
+@media screen and (max-width:800px){
+
+	.col-m-1 {flex-basis: 8.33333%;}
+	.col-m-2 {flex-basis: 16.66667%;}
+	.col-m-3 {flex-basis: 25%;}
+	.col-m-4 {flex-basis: 33.33333%;}
+	.col-m-5 {flex-basis: 41.66667%;}
+	.col-m-6 {flex-basis: 50%;}
+	.col-m-7 {flex-basis: 58.33333%;}
+	.col-m-8 {flex-basis: 66.66667%;}
+	.col-m-9 {flex-basis: 75%;}
+	.col-m-10 {flex-basis: 83.33333%;}
+	.col-m-11 {flex-basis: 91.66667%;}
+	.col-m-12 {flex-basis: 100%;}
+
+}
+@media screen and (max-width:400px){
+	.col-s-1 {flex-basis: 8.33333%;}
+	.col-s-2 {flex-basis: 16.66667%;}
+	.col-s-3 {flex-basis: 25%;}
+	.col-s-4 {flex-basis: 33.33333%;}
+	.col-s-5 {flex-basis: 41.66667%;}
+	.col-s-6 {flex-basis: 50%;}
+	.col-s-7 {flex-basis: 58.33333%;}
+	.col-s-8 {flex-basis: 66.66667%;}
+	.col-s-9 {flex-basis: 75%;}
+	.col-s-10 {flex-basis: 83.33333%;}
+	.col-s-11 {flex-basis: 91.66667%;}
+	.col-s-12 {flex-basis: 100%;}
+}
+/*** END OF GRID ***/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
