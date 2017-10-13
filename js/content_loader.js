@@ -1,3 +1,5 @@
+//This file is part of Iskren Tarkalanov's website. All rights reserved (c) Iskren Tarkalanov 2017.
+
 $(document).ready(function(){
 	window.location.hash = "index";
 	$('nav > a').click(function(){
